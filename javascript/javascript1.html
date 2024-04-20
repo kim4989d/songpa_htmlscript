@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 변수 :오른쪽에서 왼쪽으로 값이 넘어간다 
+        // 변수는 변할수 있다 
+        //var :모든 타입을 가질수있다 문자열,정수...
+        var name = '아무개';
+
+        //+:변수와 문자열이 만나면 문자열 +변수 연결 
+        console.log('이름은:' + name);
+
+        var name = '홍길동';
+        console.log('바뀐 이름은:' + name);
+
+    </script>
+
+
+    <script>
+
+
+        var init = 0;
+
+        //  ++init:++변수 ->변수를  실행  +1 
+
+        console.log(++init);  //1 실행 + 1 
+        console.log(init);    //1  
+        console.log(++init);  //2 실행 + 1 
+        console.log(init);    //2
+
+        console.log('==================================');
+
+        init = 0;
+
+        //  init++:변수++->변수 두번실행 +1 
+        console.log(++init);  //1 실행 + 1 
+        console.log(init++);    //1 init 한번 실행  
+        console.log(++init);  //3 실행 + 1 두번 실행 +1  
+        console.log(init++);    //3 한번실행
+        console.log(init);    //4 두번실행 +1 
+
+
+    </script>
+
+    <script>
+
+        var one = 10;
+        var two = 20;
+        // if(true){true 면 괄호실행}else{false 면 괄호실행}
+        //one<=two two가 크므로 true
+        if (one <= two) {
+            console.log('true');
+        } else {
+            console.log('false');
+        }
+        console.log('==============================');
+        if (one <= two) {
+            console.log('true');
+        }
+
+        if (one == two) {
+            console.log('true');
+        }
+        if (one >= two) {
+            console.log('true');
+        }
+
+        console.log('==============================');
+
+        if (one >= two) {
+            console.log('true');
+        }
+
+        else if (one <= two) {
+            console.log('true');
+        }
+        else if (one >= two) {
+            console.log('true');
+        }
+
+    </script>
+
+    <script>
+        console.log('==============================');
+
+        var choice = 3;
+        // switch:케이스 선택 3이므로 case 3으로 이동 
+        //default 는 찾는 값이 없으면 default 이동
+        switch (key) {
+            case 1:
+                console.log('1');
+                break;
+
+            case 1:
+                console.log('2');
+                break;
+            case 1:
+                console.log('3');
+                break;
+
+
+
+            default:
+            console.log('값이 없습니다');
+                break;
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+    <script>
+        console.log('===========================');
+        for (var i = 1; i <= 5; i++) {
+
+            // ||:a or b 하나라도 true ->true 
+            // 2 또는 4면 둘중에 하나가 true면 true 
+
+            if (i == 2 || i == 4) {
+
+                console.log(i);
+
+            }
+
+            //2 and 4 맞으면 (true) a and b 가맞아야 true 아무값도 않들어옴 
+            // if (i == 2 && i == 4) {
+
+            //     console.log(i);
+
+            // }
+
+            //2 and 4 아니면 (true) a and b 가맞아야 true 2 AND 4 가 아니므로 true 
+            // if (i != 2 && i != 4) {
+
+            //     console.log(i);
+
+            // }
+
+        }
+
+        console.log('===============================');
+
+    </script>
+
+    <script>
+
+
+
+        // 짝수 의합 
+        var one = 0;
+        // 홀수 의합 
+        var two = 0;
+
+        /*
+
+
+            1 ~ 10 까지 짝수읩 홀수의합 
+            
+            짝수의합에서 3,5,9을 뺀 짝수의합
+
+
+        */
+
+        for (var i = 0; i <= 10; i++) {
+
+            // 나누어 0이되면 짝수 
+            if (i % 2 == 0) {
+
+                // ||:a or b :a 또는 b 가 참(true)면참(true)
+                //&&:a and b:a 그리고b a 그리고 b가 참(true)면 참(true) 나머지는 거짓(false) 
+
+
+                //3 or 5 or 9  3 또는 5 또는 9가 들어오면 반대면 3,5,9빼고   
+                // !:!true->걸면 false 반대가된다 
+
+                if (!(i == 3 || i == 5 || i == 9)) {
+                    //짝수의합 
+                    two += i;
+                }
+
+            } else if (!(i % 2 == 0)) {
+                //3 or 5 or 9  3 또는 5 또는 9가 들어오면 반대면 3,5,9빼고   
+                // !:!true->걸면 false 반대가된다 
+
+                if (!(i == 3 || i == 5 || i == 9)) {
+                    //홀수의합 
+                    one += i;
+                }
+
+            }
+
+        }
+
+        console.log('짝수:' + two);
+        console.log('홀수:' + one);
+        console.log('총합:' + (one + two));
+
+
+
+    </script>
+
+
+
+
+    <script>
+        console.log('=====================');
+        init = 10;
+        one = 0;
+        two = 0;
+
+
+        for (var i = 0; i <= 10; i++) {
+            // if ((!i == 3 && i == 5 && i == 9)) { // 3 그리고 5 그리고 9 가 않들어오면 한번에
+            if (i != 3 && i != 5 && i != 9) {
+                console.log('들어오는수:' + i);
+                if (i % 2 == 0) {
+                    two += i;
+                } else {
+                    one += i;
+                }
+            }
+        }
+
+        console.log('짝수:' + two);
+        console.log('홀수:' + one);
+        console.log('총합:' + (one + two));
+
+
+    </script>
+
+
+</body>
+
+</html>
