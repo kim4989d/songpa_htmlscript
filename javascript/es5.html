@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function Examples</title>
+</head>
+<body>
+
+<!-- "use strict"를 적용하는 함수 호출 버튼 -->
+<button onclick="useStrictExample()">use strict</button>
+<!-- String[number] access를 보여주는 함수 호출 버튼 -->
+<button onclick="stringAccessExample()">String[number] access</button>
+<!-- Multiline strings를 보여주는 함수 호출 버튼 -->
+<button onclick="multilineStringExample()">Multiline strings</button>
+<!-- String.trim()을 보여주는 함수 호출 버튼 -->
+<button onclick="stringTrimExample()">String.trim()</button>
+<!-- Array.isArray()를 보여주는 함수 호출 버튼 -->
+<button onclick="isArrayExample()">Array.isArray()</button>
+<!-- Array forEach()를 보여주는 함수 호출 버튼 -->
+<button onclick="arrayForEachExample()">Array forEach()</button>
+<!-- Array map()를 보여주는 함수 호출 버튼 -->
+<button onclick="arrayMapExample()">Array map()</button>
+<!-- Array filter()를 보여주는 함수 호출 버튼 -->
+<button onclick="arrayFilterExample()">Array filter()</button>
+<!-- Array reduce()를 보여주는 함수 호출 버튼 -->
+<button onclick="arrayReduceExample()">Array reduce()</button>
+<!-- Array reduceRight()를 보여주는 함수 호출 버튼 -->
+<button onclick="arrayReduceRightExample()">Array reduceRight()</button>
+<!-- Array every()를 보여주는 함수 호출 버튼 -->
+<button onclick="arrayEveryExample()">Array every()</button>
+<!-- 각 버튼에 대한 설명 추가 -->
+<!-- 나머지 예제들도 위와 같은 방식으로 함수로 만들어 주세요. -->
+
+<script>
+  // "use strict"를 적용하는 함수
+  function useStrictExample() {
+    "use strict";
+    console.log("use strict");
+  }
+
+  // String[number] access를 보여주는 함수
+  function stringAccessExample() {
+    const str = "hello";
+    console.log(str[0]); // "h"
+    console.log(str[2]); // "l"
+  }
+
+  // Multiline strings를 보여주는 함수
+  function multilineStringExample() {
+    const multiLineString = `This is a
+    multiline
+    string.`;
+    console.log(multiLineString);
+  }
+
+  // String.trim()을 보여주는 함수
+  function stringTrimExample() {
+    const str = "   hello   ";
+    console.log(str.trim()); // "hello"
+  }
+
+  // Array.isArray()를 보여주는 함수
+  function isArrayExample() {
+    const arr = [1, 2, 3];
+    console.log(Array.isArray(arr)); // true
+  }
+
+  // Array forEach()를 보여주는 함수
+  function arrayForEachExample() {
+    const arr = [1, 2, 3];
+    arr.forEach(item => {
+      console.log(item);
+    });
+  }
+
+  // Array map()를 보여주는 함수
+  function arrayMapExample() {
+    const arr = [1, 2, 3];
+    const mappedArr = arr.map(item => item * 2);
+    console.log(mappedArr); // [2, 4, 6]
+  }
+
+  // Array filter()를 보여주는 함수
+  function arrayFilterExample() {
+    const arr = [1, 2, 3, 4, 5];
+    const filteredArr = arr.filter(item => item % 2 === 0);
+    console.log(filteredArr); // [2, 4]
+  }
+
+  // Array reduce()를 보여주는 함수
+  function arrayReduceExample() {
+    const arr = [1, 2, 3, 4, 5];
+    const sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    console.log(sum); // 15
+  }
+
+  // Array reduceRight()를 보여주는 함수
+  function arrayReduceRightExample() {
+    const arr = ["a", "b", "c"];
+    const result = arr.reduceRight((accumulator, currentValue) => accumulator + currentValue);
+    console.log(result); // "cba"
+  }
+
+  // Array every()를 보여주는 함수
+  function arrayEveryExample() {
+    const arr = [1, 2, 3, 4, 5];
+    const allGreaterThanZero = arr.every(item => item > 0);
+    console.log(allGreaterThanZero); // true
+  }
+
+  // 나머지 예제들도 위와 같은 방식으로 함수로 만들어 주세요.
+
+</script>
+
+</body>
+</html>
